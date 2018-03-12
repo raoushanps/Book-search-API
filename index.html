@@ -37,7 +37,7 @@ and open the template in the editor.
                             for(i=0;i<response.items.length;i++)
                             {
                                 title=$('<h5 class="center-align black-text">' + response.items[i].volumeInfo.title+'</h5>');
-                                author=$('<h5 class="center-align black-text"> By : ' + response.items[i].volumeInfo.author+'</h5>');
+                                author=$('<h5 class="center-align black-text"> By : ' + response.items[i].volumeInfo.authors+'</h5>');
                                 img =$('<img class="aligning card z-depth-5" id="dynamic"><br><a href='+response.items[i].volumeInfo.infolink + '><button id="imagebutton" class="btn red aligning">Read More </button></a>');
                                 url = response.items[i].volumeInfo.imageLinks.thumbnail;
                                 img.attr('src',url);
