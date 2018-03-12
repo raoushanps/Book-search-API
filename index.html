@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -16,7 +10,6 @@ and open the template in the editor.
         <script>
             $(document).ready(function(){
                 $("#myform").submit(function(e){
-                    //alert("Hello");
                     e.preventDefault();
                     var search = $("#books").val();
                     if(search=='')
@@ -31,9 +24,6 @@ and open the template in the editor.
                         var author='';
                         
                         $.get("https://www.googleapis.com/books/v1/volumes?q=" + search,function(response){  
-                            //alert("get part");
-                            //alert(response);
-                            //console.log(response);
                             for(i=0;i<response.items.length;i++)
                             {
                                 title=$('<h5 class="center-align black-text">' + response.items[i].volumeInfo.title+'</h5>');
